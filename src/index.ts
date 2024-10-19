@@ -9,6 +9,10 @@ const app = new Hono();
 app.use("*", logger());
 app.use("*", cors());
 app.use("*", requestId());
+app.use("*", (c, next) => {
+	console.log(`Request ID: ${c.get("requestId")}`);
+	return next();
+  });
 app.use("/api/*",
 	basicAuth({
 		username: "testuser",
