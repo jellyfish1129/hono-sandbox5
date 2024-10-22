@@ -17,6 +17,6 @@
     "wrangler": "^3.60.3"
   },
   "dependencies": {
-    "hono": "^4.6.5"
+    "hono": "^4.6.6"
   }
 }
